@@ -7,7 +7,7 @@ import com.project.ecommerce.model.Subcategory;
 public interface SubcategoryService {
 	Subcategory getById(long id);
 	List<Subcategory> getAll();
-	Subcategory delete(long id);
-	Subcategory update(long id, Subcategory subcategory);
-	Subcategory add(Subcategory subcategory);
+	void delete(long id);
+	void update(long id, Subcategory subcategory);
+	void add(Subcategory subcategory);
 }

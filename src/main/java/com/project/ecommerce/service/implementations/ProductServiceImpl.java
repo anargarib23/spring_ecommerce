@@ -3,38 +3,43 @@ package com.project.ecommerce.service.implementations;
 import java.util.List;
 
 import com.project.ecommerce.model.Product;
+import com.project.ecommerce.repository.ProductRepository;
 import com.project.ecommerce.service.ProductService;
 
 public class ProductServiceImpl implements ProductService{
+	
+	private ProductRepository productRepository;
 
 	@Override
 	public Product getById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return productRepository.findById(id).orElse(null);
 	}
 
 	@Override
 	public List<Product> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return productRepository.findAll();
 	}
 
 	@Override
-	public Product delete(long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public void delete(long id) {
+		productRepository.deleteById(id);
 	}
 
 	@Override
-	public Product update(long id, Product product) {
-		// TODO Auto-generated method stub
-		return null;
+	public void update(long id, Product product) {
+		Product productReference = getById(id);
+		
+		productReference.setImages(product.getImages());
+		productReference.setName(product.getName());
+		productReference.setPrice(product.getPrice());
+		productReference.setSpecifications(product.getSpecifications());
+		
+		productRepository.save(productReference);
 	}
 
 	@Override
-	public Product add(Product product) {
-		// TODO Auto-generated method stub
-		return null;
+	public void add(Product product) {
+		productRepository.save(product);
 	}
 
 }

@@ -7,7 +7,7 @@ import com.project.ecommerce.model.Image;
 public interface ImageService {
 	Image getById(long id);
 	List<Image> getAll();
-	Image delete(long id);
-	Image update(long id, Image image);
-	Image add(Image image);
+	void delete(long id);
+	void update(long id, Image image);
+	void add(Image image);
 }
