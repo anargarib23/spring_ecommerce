@@ -9,7 +9,7 @@ import com.project.ecommerce.dto.ImageRequestDTO;
 import com.project.ecommerce.dto.ImageResponseDTO;
 import com.project.ecommerce.model.Image;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface ImageMapper {
 	ImageMapper INSTANCE = Mappers.getMapper(ImageMapper.class);
 	

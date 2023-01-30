@@ -13,7 +13,6 @@ public class ProductResponseDTO {
 	private List<Image> images;
 	private List<Specification> specification;
 	
-	
 	public Long getId() {
 		return id;
 	}

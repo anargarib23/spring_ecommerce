@@ -2,12 +2,15 @@ package com.project.ecommerce.service.implementations;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.project.ecommerce.model.Image;
 import com.project.ecommerce.repository.ImageRepository;
 import com.project.ecommerce.service.ImageService;
 
 public class ImageServiceImpl implements ImageService{
 	
+	@Autowired
 	private ImageRepository imageRepository;
 
 	@Override

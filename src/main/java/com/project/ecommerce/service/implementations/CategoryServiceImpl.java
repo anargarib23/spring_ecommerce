@@ -38,7 +38,6 @@ public class CategoryServiceImpl implements CategoryService{
 	@Override
 	public void add(Category category) {
 		categoryRepository.save(category);
-
 	}
 	
 	
