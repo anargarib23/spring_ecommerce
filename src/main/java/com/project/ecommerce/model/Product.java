@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.List;
@@ -28,7 +30,11 @@ public class Product {
 	
 	@OneToMany(mappedBy="product")
 	private List<Specification> specifications;
-
+	
+	@ManyToOne
+	@JoinColumn(name="subcategory_id")
+	private Subcategory subcategory;
+	
 	public long getId() {
 		return id;
 	}
