@@ -32,7 +32,7 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public Product save(Product product) {
+	public Product add(Product product) {
 		// TODO Auto-generated method stub
 		return null;
 	}
