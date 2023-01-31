@@ -11,7 +11,7 @@ public class ProductResponseDTO {
 	private String name;
 	private Double price;
 	private List<Image> images;
-	private List<Specification> specification;
+	private List<Specification> specifications;
 	
 	public Long getId() {
 		return id;
@@ -38,10 +38,10 @@ public class ProductResponseDTO {
 		this.images = images;
 	}
 	public List<Specification> getSpecification() {
-		return specification;
+		return specifications;
 	}
-	public void setSpecification(List<Specification> specification) {
-		this.specification = specification;
+	public void setSpecifications(List<Specification> specifications) {
+		this.specifications = specifications;
 	}
 	
 	
