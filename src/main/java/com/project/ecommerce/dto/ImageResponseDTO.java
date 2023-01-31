@@ -1,5 +1,8 @@
 package com.project.ecommerce.dto;
 
+import lombok.Builder;
+
+@Builder
 public class ImageResponseDTO {
 	
 	private Long id;
