@@ -35,7 +35,7 @@ public class ImageController {
 		return imageMapper.toImageResponseDTO(image);
 	}
 	
-	@GetMapping("/all")
+	@GetMapping
 	private List<ImageResponseDTO> getAllImages(){
 		List<Image> images = imageService.getAll();
 		return imageMapper.toImageResponseDTOlist(images);
