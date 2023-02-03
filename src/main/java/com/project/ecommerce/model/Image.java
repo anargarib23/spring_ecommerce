@@ -23,6 +23,10 @@ public class Image {
 	@ManyToOne
 	@JoinColumn(name="product_id")
 	private Product product;
+	
+	@ManyToOne
+	@JoinColumn(name="slider_id")
+	private ImageSlider imageSlider;
 
 	public long getId() {
 		return id;
