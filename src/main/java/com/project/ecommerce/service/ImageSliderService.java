@@ -5,9 +5,8 @@ import java.util.List;
 import com.project.ecommerce.model.ImageSlider;
 
 public interface ImageSliderService {
-	ImageSlider getById(long id);
+	ImageSlider getById(Long id);
 	List<ImageSlider> getAll();
-	void delete(long id);
-	void update(long id, ImageSlider imageSlider);
+	void delete(Long id);
 	void add(ImageSlider imageSlider);
 }

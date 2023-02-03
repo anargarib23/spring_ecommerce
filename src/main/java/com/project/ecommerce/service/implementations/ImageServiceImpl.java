@@ -29,16 +29,6 @@ public class ImageServiceImpl implements ImageService{
 	}
 
 	@Override
-	public void update(long id, Image image) {
-		Image imageReference = getById(id);
-		
-		imageReference.setSource(image.getSource());
-		
-		imageRepository.save(imageReference);
-		
-	}
-
-	@Override
 	public void add(Image image) {
 		imageRepository.save(image);
 		

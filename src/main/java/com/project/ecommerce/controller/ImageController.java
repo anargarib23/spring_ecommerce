@@ -55,11 +55,4 @@ public class ImageController {
 		
 	}
 	
-	@PutMapping("/{id}")
-	public ResponseEntity<Void> updateImage(@RequestBody ImageRequestDTO request, @PathVariable Long id){
-		Image image = imageMapper.toImage(request);
-		imageService.update(id, image);
-		return ResponseEntity.ok().build();
-		
-	}
 }

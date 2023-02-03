@@ -8,6 +8,5 @@ public interface ImageService {
 	Image getById(long id);
 	List<Image> getAll();
 	void delete(long id);
-	void update(long id, Image image);
 	void add(Image image);
 }
