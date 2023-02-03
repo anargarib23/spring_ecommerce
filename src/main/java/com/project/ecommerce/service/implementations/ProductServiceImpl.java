@@ -2,12 +2,15 @@ package com.project.ecommerce.service.implementations;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.project.ecommerce.model.Product;
 import com.project.ecommerce.repository.ProductRepository;
 import com.project.ecommerce.service.ProductService;
 
 public class ProductServiceImpl implements ProductService{
 	
+	@Autowired
 	private ProductRepository productRepository;
 
 	@Override
