@@ -6,12 +6,11 @@ import com.project.ecommerce.dto.ImageRequestDTO;
 import com.project.ecommerce.dto.ImageResponseDTO;
 import com.project.ecommerce.model.Image;
 
-//@Mapper(componentModel = "spring")
-public interface ImageMapper {
+public interface ImageSliderMapper {
 //	ImageMapper INSTANCE = Mappers.getMapper(ImageMapper.class);
 	
-	ImageResponseDTO toImageResponseDTO(Image image);
-	List<ImageResponseDTO> toImageResponseDTOlist(List<Image> images);
+	ImageSliderResponseDTO toImageSliderResponseDTO(ImageSlider imageSlider);
+	List<ImageSliderResponseDTO> toImageSliderResponseDTOlist(List<ImageSlider> imageSliders);
 	
-	Image toImage(ImageRequestDTO imageRequestDTO);
+	ImageSlider toImageSlider(ImageSliderRequestDTO imageSliderRequestDTO);
 }
