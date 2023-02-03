@@ -48,8 +48,8 @@ public class SubcategoryController {
 	
 	@PutMapping("/{id}")
 	public ResponseEntity<Void> updateSubcategory(@RequestBody SubcategoryRequestDTO request, @PathVariable Long id){
-		Subcategory product = subcategoryMapper.toSubcategory(request);
-		subcategoryService.update(id, product);
+		Subcategory subcategory = subcategoryMapper.toSubcategory(request);
+		subcategoryService.update(id, subcategory);
 		return ResponseEntity.ok().build();
 	}
 	

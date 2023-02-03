@@ -14,14 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.ecommerce.dto.CategoryRequestDTO;
 import com.project.ecommerce.dto.CategoryResponseDTO;
-import com.project.ecommerce.dto.SubcategoryRequestDTO;
-import com.project.ecommerce.dto.SubcategoryResponseDTO;
 import com.project.ecommerce.mapper.CategoryMapper;
-import com.project.ecommerce.mapper.SubcategoryMapper;
 import com.project.ecommerce.model.Category;
-import com.project.ecommerce.model.Subcategory;
 import com.project.ecommerce.service.CategoryService;
-import com.project.ecommerce.service.SubcategoryService;
+
 
 @RestController
 public class CategoryController {
