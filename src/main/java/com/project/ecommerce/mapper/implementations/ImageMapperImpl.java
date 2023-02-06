@@ -15,6 +15,8 @@ public class ImageMapperImpl implements ImageMapper{
 		ImageResponseDTO imageResponseDTO = new ImageResponseDTO();
 		imageResponseDTO.setId(image.getId());
 		imageResponseDTO.setSource(image.getSource());
+		imageResponseDTO.setName(image.getName());
+		imageResponseDTO.setCreatioDate(image.getCreationDate());
 		return imageResponseDTO;
 	}
 
@@ -34,6 +36,8 @@ public class ImageMapperImpl implements ImageMapper{
 	public Image toImage(ImageRequestDTO imageRequestDTO) {
 		Image image = new Image();
 		image.setSource(imageRequestDTO.getSource());
+		image.setName(imageRequestDTO.getName());
+		image.setCreationDate(imageRequestDTO.getCreationDate());
 		
 		return image;
 	}
