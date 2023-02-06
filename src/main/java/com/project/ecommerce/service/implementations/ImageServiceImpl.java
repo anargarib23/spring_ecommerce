@@ -36,10 +36,10 @@ public class ImageServiceImpl implements ImageService{
 	public void delete(long id) {
 		Image image = getById(id);
 		Path file = root.resolve(image.getName());
-		
+		System.out.println(file.toString());
 		try {
-			Files.delete(file);
-			imageRepository.deleteById(id);		
+//			Files.delete(file);
+//			imageRepository.deleteById(id);		
 		} catch (Exception e) {
 			throw new RuntimeException(e.getMessage());		
 		}

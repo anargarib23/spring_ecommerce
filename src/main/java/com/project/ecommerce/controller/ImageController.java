@@ -26,7 +26,6 @@ import com.project.ecommerce.service.ImageService;
 import com.project.ecommerce.service.ImageSliderService;
 
 @RestController
-@RequestMapping("/image")
 public class ImageController {
 	
 	@Autowired
