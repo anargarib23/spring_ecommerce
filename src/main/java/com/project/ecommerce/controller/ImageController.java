@@ -38,25 +38,25 @@ public class ImageController {
 	@Autowired
 	private ImageSliderService imageSliderService;
 	
-	@GetMapping("/{id}")
+	@GetMapping("image/{id}")
 	private ImageResponseDTO getImage(@PathVariable Long id) {
 		Image image = imageService.getById(id);
 		return imageMapper.toImageResponseDTO(image);
 	}
 	
-	@GetMapping("/all")
+	@GetMapping("image/all")
 	private List<ImageResponseDTO> getAllImages(){
 		List<Image> images = imageService.getAll();
 		return imageMapper.toImageResponseDTOlist(images);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("image/delete/{id}")
 	public ResponseEntity<Void> deleteImage(@PathVariable Long id) {
 		imageService.delete(id);
 		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping("/add")
+	@PostMapping("image/add")
 	public ResponseEntity<String> addImage(@RequestParam("file") MultipartFile file){
 		try {
 			imageService.add(file);
