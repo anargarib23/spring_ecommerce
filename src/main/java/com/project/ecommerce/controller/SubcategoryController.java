@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.ecommerce.dto.SubcategoryRequestDTO;
@@ -19,6 +20,7 @@ import com.project.ecommerce.model.Subcategory;
 import com.project.ecommerce.service.SubcategoryService;
 
 @RestController
+@RequestMapping("/subcategory")
 public class SubcategoryController {
 	@Autowired
 	private SubcategoryMapper subcategoryMapper;
