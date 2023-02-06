@@ -15,11 +15,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.project.ecommerce.dto.ImageRequestDTO;
 import com.project.ecommerce.dto.ImageResponseDTO;
+import com.project.ecommerce.dto.ImageSliderRequestDTO;
+import com.project.ecommerce.dto.ImageSliderResponseDTO;
 import com.project.ecommerce.mapper.ImageMapper;
+import com.project.ecommerce.mapper.ImageSliderMapper;
 import com.project.ecommerce.model.Image;
+import com.project.ecommerce.model.ImageSlider;
 import com.project.ecommerce.service.ImageService;
+import com.project.ecommerce.service.ImageSliderService;
 
 @RestController
 @RequestMapping("/image")
@@ -27,9 +31,13 @@ public class ImageController {
 	
 	@Autowired
 	private ImageMapper imageMapper;
+	@Autowired
+	private ImageSliderMapper imageSliderMapper;
 	
 	@Autowired
 	private ImageService imageService;
+	@Autowired
+	private ImageSliderService imageSliderService;
 	
 	@GetMapping("/{id}")
 	private ImageResponseDTO getImage(@PathVariable Long id) {
@@ -37,7 +45,7 @@ public class ImageController {
 		return imageMapper.toImageResponseDTO(image);
 	}
 	
-	@GetMapping
+	@GetMapping("/all")
 	private List<ImageResponseDTO> getAllImages(){
 		List<Image> images = imageService.getAll();
 		return imageMapper.toImageResponseDTOlist(images);
@@ -49,7 +57,7 @@ public class ImageController {
 		return ResponseEntity.ok().build();
 	}
 	
-	@PostMapping
+	@PostMapping("/add")
 	public ResponseEntity<String> addImage(@RequestParam("file") MultipartFile file){
 		try {
 			imageService.add(file);
@@ -59,5 +67,33 @@ public class ImageController {
 		}	
 		
 	}
+	
+	@GetMapping("image-slider/{id}")
+	public ImageSliderResponseDTO getImageSlider(@PathVariable Long id) {
+		ImageSlider imageSlider = imageSliderService.getById(id);
+		return imageSliderMapper.toImageSliderResponseDTO(imageSlider);
+	}
+	
+	@GetMapping("image-slider/all")
+	public List<ImageSliderResponseDTO> getAllImageSliders(){
+		List<ImageSlider> imageSliders = imageSliderService.getAll();		
+		return imageSliderMapper.toImageSliderResponseDTOlist(imageSliders);
+		
+	}
+	
+	@PostMapping("image-slider/add")
+	public ResponseEntity<Void> addImageSlider(@RequestBody ImageSliderRequestDTO request) {
+		ImageSlider imageSlider = imageSliderMapper.toImageSlider(request);
+		imageSliderService.add(imageSlider);
+		return ResponseEntity.ok().build();
+	}
+	
+	
+	@DeleteMapping("image-slider/delete")
+	public ResponseEntity<Void> deleteImageSlider(@PathVariable Long id){
+		imageSliderService.delete(id);
+		return ResponseEntity.ok().build();
+	}
+	
 	
 }

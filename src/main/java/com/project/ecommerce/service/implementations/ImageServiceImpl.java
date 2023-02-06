@@ -34,7 +34,15 @@ public class ImageServiceImpl implements ImageService{
 
 	@Override
 	public void delete(long id) {
-		imageRepository.deleteById(id);		
+		Image image = getById(id);
+		Path file = root.resolve(image.getName());
+		
+		try {
+			Files.delete(file);
+			imageRepository.deleteById(id);		
+		} catch (Exception e) {
+			throw new RuntimeException(e.getMessage());		
+		}
 	}
 
 	@Override
