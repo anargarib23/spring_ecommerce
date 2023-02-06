@@ -5,7 +5,7 @@ import java.util.Date;
 public class ImageRequestDTO {
 	private String source;
 	private String name;
-	private Date creationDate;
+	private Date uploadDate;
 
 	public String getSource() {
 		return source;
@@ -23,13 +23,14 @@ public class ImageRequestDTO {
 		this.name = name;
 	}
 
-	public Date getCreationDate() {
-		return creationDate;
+	public Date getUploadDate() {
+		return uploadDate;
 	}
 
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
+	public void setUploadDate(Date uploadDate) {
+		this.uploadDate = uploadDate;
 	}
+
 	
 	
 }

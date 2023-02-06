@@ -10,7 +10,7 @@ public class ImageResponseDTO {
 	private Long id;
 	private String source;
 	private String name;
-	private Date creatioDate;
+	private Date uploadDate;
 
 	public String getSource() {
 		return source;
@@ -36,13 +36,14 @@ public class ImageResponseDTO {
 		this.name = name;
 	}
 
-	public Date getCreatioDate() {
-		return creatioDate;
+	public Date getUploadDate() {
+		return uploadDate;
 	}
 
-	public void setCreatioDate(Date creatioDate) {
-		this.creatioDate = creatioDate;
+	public void setUploadDate(Date uploadDate) {
+		this.uploadDate = uploadDate;
 	}
+
 	
 	
 	

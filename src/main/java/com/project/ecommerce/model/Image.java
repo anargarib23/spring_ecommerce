@@ -25,8 +25,8 @@ public class Image {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="creation_date")
-	private Date creationDate;
+	@Column(name="upload_date")
+	private Date uploadDate;
 	
 	@ManyToOne
 	@JoinColumn(name="product_id")
@@ -62,14 +62,6 @@ public class Image {
 		this.name = name;
 	}
 
-	public Date getCreationDate() {
-		return creationDate;
-	}
-
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
-	}
-
 	public Product getProduct() {
 		return product;
 	}
@@ -86,12 +78,17 @@ public class Image {
 		this.imageSlider = imageSlider;
 	}
 
-	@Override
-	public String toString() {
-		return "Image [id=" + id + ", source=" + source + ", name=" + name + ", creationDate=" + creationDate + "]";
+	public Date getUploadDate() {
+		return uploadDate;
 	}
 
+	public void setUploadDate(Date uploadDate) {
+		this.uploadDate = uploadDate;
+	}
 
-	
+	@Override
+	public String toString() {
+		return "Image [id=" + id + ", source=" + source + ", name=" + name + ", uploadDate=" + uploadDate + "]";
+	}
 	
 }
