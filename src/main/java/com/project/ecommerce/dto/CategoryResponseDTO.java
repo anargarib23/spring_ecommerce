@@ -7,6 +7,7 @@ import com.project.ecommerce.model.Subcategory;
 public class CategoryResponseDTO {
 	
 	private Long id;
+	private String name;
 	private List<Subcategory> subcategories;
 	
 	public Long getId() {
@@ -21,6 +22,14 @@ public class CategoryResponseDTO {
 	public void setSubcategories(List<Subcategory> subcategories) {
 		this.subcategories = subcategories;
 	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 	
 	
 }

@@ -30,6 +30,7 @@ public class SubcategoryServiceImpl implements SubcategoryService{
 	public void update(long id, Subcategory subcategory) {
 		Subcategory subcategoryReference = getById(id);
 		
+		subcategoryReference.setName(subcategory.getName());
 		subcategoryReference.setProducts(subcategory.getProducts());
 		
 		subcategoryRepository.save(subcategoryReference);

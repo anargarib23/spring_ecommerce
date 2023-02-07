@@ -14,6 +14,7 @@ public class CategoryMapperImpl implements CategoryMapper {
 	public CategoryResponseDTO toCategoryResponseDTO(Category category) {
 		CategoryResponseDTO categoryResponseDTO = new CategoryResponseDTO();
 		categoryResponseDTO.setId(category.getId());
+		categoryResponseDTO.setName(category.getName());
 		categoryResponseDTO.setSubcategories(category.getSubcategories());
 		return categoryResponseDTO;
 	}
@@ -33,6 +34,7 @@ public class CategoryMapperImpl implements CategoryMapper {
 	@Override
 	public Category toCategory(CategoryRequestDTO categoryRequestDTO) {
 		Category category = new Category();
+		category.setName(categoryRequestDTO.getName());
 		category.setSubcategories(categoryRequestDTO.getSubcategories());
 		return category;
 	}

@@ -29,6 +29,7 @@ public class CategoryServiceImpl implements CategoryService{
 	public void update(long id, Category category) {
 		Category categoryReference = getById(id);
 		
+		categoryReference.setName(category.getName());
 		categoryReference.setSubcategories(category.getSubcategories());
 		
 		categoryRepository.save(categoryReference);

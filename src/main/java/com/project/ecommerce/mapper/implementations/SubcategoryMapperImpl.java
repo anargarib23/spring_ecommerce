@@ -14,6 +14,7 @@ public class SubcategoryMapperImpl implements SubcategoryMapper {
 	public SubcategoryResponseDTO toSubcategoryResponseDTO(Subcategory subcategory) {
 		SubcategoryResponseDTO subcategoryResponseDTO = new SubcategoryResponseDTO();
 		subcategoryResponseDTO.setId(subcategory.getId());
+		subcategoryResponseDTO.setName(subcategory.getName());
 		subcategoryResponseDTO.setProducts(subcategory.getProducts());
 		return subcategoryResponseDTO;
 	}
@@ -34,6 +35,7 @@ public class SubcategoryMapperImpl implements SubcategoryMapper {
 	public Subcategory toSubcategory(SubcategoryRequestDTO subcategoryRequestDTO) {
 		Subcategory subcategory = new Subcategory();
 		subcategory.setProducts(subcategoryRequestDTO.getProducts());
+		subcategory.setName(subcategoryRequestDTO.getName());
 		return subcategory;
 	}
 }
