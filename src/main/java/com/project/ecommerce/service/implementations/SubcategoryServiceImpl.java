@@ -2,12 +2,15 @@ package com.project.ecommerce.service.implementations;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.project.ecommerce.model.Subcategory;
 import com.project.ecommerce.repository.SubcategoryRepository;
 import com.project.ecommerce.service.SubcategoryService;
 
 public class SubcategoryServiceImpl implements SubcategoryService{
 	
+	@Autowired
 	private SubcategoryRepository subcategoryRepository;
 
 	@Override

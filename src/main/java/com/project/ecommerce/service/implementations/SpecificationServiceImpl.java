@@ -2,12 +2,15 @@ package com.project.ecommerce.service.implementations;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.project.ecommerce.model.Specification;
 import com.project.ecommerce.repository.SpecificationRepository;
 import com.project.ecommerce.service.SpecificationService;
 
 public class SpecificationServiceImpl implements SpecificationService{
 	
+	@Autowired
 	private SpecificationRepository specificationRepository;
 
 	@Override

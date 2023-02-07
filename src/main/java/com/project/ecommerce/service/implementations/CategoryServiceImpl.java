@@ -2,11 +2,14 @@ package com.project.ecommerce.service.implementations;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.project.ecommerce.model.Category;
 import com.project.ecommerce.repository.CategoryRepository;
 import com.project.ecommerce.service.CategoryService;
 
 public class CategoryServiceImpl implements CategoryService{
+	@Autowired
 	private CategoryRepository categoryRepository;
 
 	@Override
