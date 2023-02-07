@@ -52,3 +52,32 @@ Specification
   "content": ""
 }
 ```
+
+Full view
+```json
+[{
+  "id" : 0,
+  "name": "",
+  "Subcategories" : [{
+  "id" : 0,
+  "name" : "",
+  "products": [{
+    "id": 0,
+    "name": "",
+    "price": 0.0,
+    "images": [{
+    "id": 0,
+    "name": "",
+    "source": "",
+    "uploadDate": ""
+    }],
+    "specifications": [{
+    "id": 0,
+    "name": "",
+    "content": ""
+    }]
+  }
+  ] 
+  }]
+}]
+```
