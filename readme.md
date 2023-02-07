@@ -66,15 +66,15 @@ Full view
     "name": "",
     "price": 0.0,
     "images": [{
-    "id": 0,
-    "name": "",
-    "source": "",
-    "uploadDate": ""
+      "id": 0,
+      "name": "",
+      "source": "",
+      "uploadDate": ""
     }],
     "specifications": [{
-    "id": 0,
-    "name": "",
-    "content": ""
+      "id": 0,
+      "name": "",
+      "content": ""
     }]
   }
   ] 
