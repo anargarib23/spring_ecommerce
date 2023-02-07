@@ -39,7 +39,7 @@ public class ProductMapperImpl implements ProductMapper{
 		product.setName(productRequestDTO.getName());
 		product.setPrice(productRequestDTO.getPrice());
 		product.setImages(productRequestDTO.getImages());
-		product.setSpecifications(productRequestDTO.getSpecification());
+		product.setSpecifications(productRequestDTO.getSpecifications());
 		return product;
 	}
 

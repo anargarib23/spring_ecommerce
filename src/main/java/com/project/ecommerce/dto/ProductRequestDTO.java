@@ -9,7 +9,7 @@ public class ProductRequestDTO {
 	private String name;
 	private Double price;
 	private List<Image> images;
-	private List<Specification> specification;
+	private List<Specification> specifications;
 	
 	public String getName() {
 		return name;
@@ -29,11 +29,11 @@ public class ProductRequestDTO {
 	public void setImages(List<Image> images) {
 		this.images = images;
 	}
-	public List<Specification> getSpecification() {
-		return specification;
+	public List<Specification> getSpecifications() {
+		return specifications;
 	}
-	public void setSpecification(List<Specification> specification) {
-		this.specification = specification;
+	public void setSpecifications(List<Specification> specifications) {
+		this.specifications = specifications;
 	}
 	
 	
